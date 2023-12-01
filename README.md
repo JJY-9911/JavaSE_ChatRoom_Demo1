@@ -12,7 +12,7 @@ ChatFrame：若登陆成功，则打开聊天界面。添加按钮监听和键�
 
 Dao：
 jdbc:mysql://***.***.**.**/chat?&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-用户IP和服务器IP是不同的。服务器IP是192.168.0.52，数据库在服务器所在机器，所以要在末尾写allowPublicKeyRetrieval=true，并将数据库的mysql库中user表里user为root的host改成%，来允许客户端连接数据库，才能在用户机器上调用服务器数据库验证登陆。读者需将Dao中此处修改成自己服务器的IP。
+用户IP和服务器IP是不同的。数据库在服务器所在机器，所以要在末尾写allowPublicKeyRetrieval=true，并将数据库的mysql库中user表里user为root的host改成%，来允许客户端连接数据库，才能在用户机器上调用服务器数据库验证登陆。读者需将Dao中此处修改成自己服务器的IP。
 
 
 Util介绍：
