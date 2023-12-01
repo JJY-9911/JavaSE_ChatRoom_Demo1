@@ -11,7 +11,7 @@ Client：包含内部类LoginFrame和Register。先打开LoginFrame，获取输�
 ChatFrame：若登陆成功，则打开聊天界面。添加按钮监听和键盘监听，可以使用“发送”键和回车来发送消息。获取用户IO流，read来自服务器分发的消息，append到聊天框；write输入框的text给服务器进行分发。
 
 Dao：
-jdbc:mysql://192.168.0.52/chat?&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+jdbc:mysql://***.***.**.**/chat?&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 用户IP和服务器IP是不同的。服务器IP是192.168.0.52，数据库在服务器所在机器，所以要在末尾写allowPublicKeyRetrieval=true，并将数据库的mysql库中user表里user为root的host改成%，来允许客户端连接数据库，才能在用户机器上调用服务器数据库验证登陆。读者需将Dao中此处修改成自己服务器的IP。
 
 
